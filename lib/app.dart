@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hostel_sathi/view/splash_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -9,7 +10,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Hostel Sathi",
       initialRoute: '/',
-      routes: {},
+      routes: {
+        '/': (context) => const SplashScreen(),
+        '/login': (context) => const LoginScreen(),
+      },
     );
   }
 }
