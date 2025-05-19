@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hostel_sathi/view/login_screen.dart';
 import 'package:hostel_sathi/view/splash_screen.dart';
 
 class MyApp extends StatelessWidget {
