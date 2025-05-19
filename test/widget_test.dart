@@ -7,6 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:hostel_sathi/app.dart';
 
 import 'package:hostel_sathi/main.dart';
 
