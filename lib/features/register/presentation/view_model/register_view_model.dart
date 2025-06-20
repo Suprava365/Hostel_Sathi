@@ -7,11 +7,6 @@ import 'package:hostel_sathi/features/register/presentation/view_model/register_
 class RegisterViewModel extends Bloc<RegisterEvent, RegisterState> {
   final AddRegisterUsecase addRegisterUsecase;
 
-  //   RegisterViewModel(this._addRegisterUsecase, {
-  //     required this.addRegisterUsecase,
-  // }) : super(RegisterState.initial()){
-  //     on<AddRegisterEvent>(_onAddRegister);
-  // };
 
   RegisterViewModel({required this.addRegisterUsecase})
     : super(RegisterState.initial()) {
