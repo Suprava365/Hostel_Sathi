@@ -45,11 +45,28 @@ class HiveService {
   // }
 
   Future<bool> checkLogin(LoginHiveModel login) async {
-    final box = await Hive.openBox<LoginHiveModel>(HiveTableConstant.loginBox);
+    final box = await Hive.openBox<RegisterHiveModel>(
+      HiveTableConstant.registerBox,
+    );
 
     return box.values.any(
       (stored) =>
           stored.email == login.email && stored.password == login.password,
     );
+  }
+
+  Future<void> saveLoggedInUserEmail(String email) async {
+    final box = await Hive.openBox('authBox');
+    await box.put('loggedInEmail', email);
+  }
+
+  Future<String?> getLoggedInUserEmail() async {
+    final box = await Hive.openBox('authBox');
+    return box.get('loggedInEmail');
+  }
+
+  Future<void> logoutUser() async {
+    final box = await Hive.openBox('authBox');
+    await box.delete('loggedInEmail');
   }
 }
