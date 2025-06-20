@@ -82,7 +82,7 @@ class HomeScreen extends StatelessWidget {
                               value: '3',
                               underline: Container(),
                               items: ['1', '2', '3', '4']
-                                  .map((e) => DropdownMenuItem(child: Text('$e'), value: e))
+                                  .map((e) => DropdownMenuItem(value: e, child: Text('$e')))
                                   .toList(),
                               onChanged: (value) {},
                             ),
