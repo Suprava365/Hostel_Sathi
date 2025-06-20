@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:hostel_sathi/core/error/failure.dart';
 import 'package:hostel_sathi/features/login/data/data_source/local_datasource/login_local_datasource.dart';
-import 'package:hostel_sathi/features/login/domain/entity/login_entity.dart';
+import 'package:hostel_sathi/features/login/domain/entity/login_enitity.dart';
 import 'package:hostel_sathi/features/login/domain/repository/login_repository.dart';
 import 'package:hostel_sathi/features/login/data/model/login_hive_model.dart';
 
