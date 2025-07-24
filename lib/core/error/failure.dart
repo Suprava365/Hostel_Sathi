@@ -1,9 +1,12 @@
-
-
 abstract class Failure {
   final String message;
 
   const Failure({required this.message});
+}
+
+// Concrete subclass
+class GenericFailure extends Failure {
+  const GenericFailure({required String message}) : super(message: message);
 }
 
 class LocalDatabaseFailure extends Failure {

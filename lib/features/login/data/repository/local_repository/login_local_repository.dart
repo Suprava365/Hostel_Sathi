@@ -11,6 +11,25 @@ class LoginLocalRepository implements ILoginRepository {
   LoginLocalRepository({required this.loginLocalDataSource});
 
   @override
+  Future<Either<Failure, bool>> loginUser({
+    required String email,
+    required String password,
+  }) async {
+    try {
+      // Convert to model
+      final model = LoginHiveModel(email: email, password: password);
+
+      // Check credentials
+      final isValid = await loginLocalDataSource.checkLogin(model);
+
+      // Return result
+      return Right(isValid);
+    } catch (e) {
+      return Left(LocalDatabaseFailure(message: e.toString()));
+    }
+  }
+
+  @override
   Future<Either<Failure, bool>> checkLogin(LoginEntity login) async {
     try {
       final model = LoginHiveModel.fromEntity(login);

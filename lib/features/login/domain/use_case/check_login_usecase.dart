@@ -18,11 +18,9 @@ class CheckLoginUsecase implements UsecaseWithParams<bool, CheckLoginParams> {
 
   @override
   Future<Either<Failure, bool>> call(CheckLoginParams params) async {
-    final login = LoginEntity(
-      id: '',
+    return await loginRepository.loginUser(
       email: params.email,
       password: params.password,
     );
-    return await loginRepository.checkLogin(login);
   }
 }

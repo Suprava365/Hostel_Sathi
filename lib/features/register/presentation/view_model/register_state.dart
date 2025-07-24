@@ -1,5 +1,3 @@
-
-
 import 'package:equatable/equatable.dart';
 
 class RegisterState extends Equatable {
@@ -16,7 +14,11 @@ class RegisterState extends Equatable {
   });
 
   //initial constructor
-  RegisterState.initial() : isLoading = false, isSuccess = false, isFailure = false, errorMessage = null;
+  RegisterState.initial()
+    : isLoading = false,
+      isSuccess = false,
+      isFailure = false,
+      errorMessage = null;
 
   //copy State
   RegisterState copyWith({
@@ -35,5 +37,4 @@ class RegisterState extends Equatable {
 
   @override
   List<Object?> get props => [isLoading, isSuccess, isFailure, errorMessage];
-    
 }
