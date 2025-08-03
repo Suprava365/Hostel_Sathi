@@ -5,7 +5,7 @@ import 'package:hostel_sathi/core/network/hive_service.dart';
 import 'package:hostel_sathi/features/login/presentation/view_model/login_event.dart';
 import 'package:hostel_sathi/features/login/presentation/view_model/login_state.dart';
 import 'package:hostel_sathi/features/login/presentation/view_model/login_view_model.dart';
-import 'package:hostel_sathi/view/home_screen.dart';
+import 'package:hostel_sathi/features/home/presentation/view/home_screen.dart';
 
 class LoginViewClean extends StatefulWidget {
   const LoginViewClean({super.key});
